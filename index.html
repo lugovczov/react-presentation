@@ -4,7 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		
+		<title>React presentation</title>
+		<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;700;800&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -25,8 +28,160 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<section class="slide-1">
+						<img class="slide__img slide-1__img" data-src="./img/startPresentation.jpg">
+						<h1 class="slide-1__text">Introduction in React</h1>
+					</section>
+					<section class="slide-1-1">
+						<img class="slide__img slide-1-1__img" data-src="./img/startFull.jpg">
+						<wrapper class="app-wrapper">
+							<div class="app app-facebook"></div>
+							<div class="app app-instagram"></div>
+							<div class="app app-netflix"></div>
+							<div class="app-times-wrapper">
+								<div class="app app-times"></div>
+							</div>
+							<div class="app-yahoo-wrapper">
+								<div class="app app-yahoo"></div>
+							</div>
+							<div class="app app-whatsApp"></div>
+							<div class="app-dropbox-wrapper">
+								<div class="app app-dropbox"></div>
+							</div>
+						</wrapper>
+					</section>
+				</section>
+				<section>
+					<section class="slide-2" >
+						<h2 class="slide-2__text">JSX: JavaScript + XML</h2>
+
+						<pre class="fragment fade-in"><code data-trim class="hljs" >
+							const element = (
+							  <h1 className="greeting">
+							    'Hello, React!'
+							  </h1>
+							);
+						</code></pre>
+
+						<pre class="fragment fade-in"><code data-noescape data-trim class="hljs" >
+							const element = React.createElement(
+						    'h1',
+						    {className: 'greeting'},
+						    'Hello, React!'
+						  );
+						</code></pre>
+
+						<pre class="fragment fade-in"><code data-noescape data-trim class="hljs" >
+						  // Note: this code is somewhat simplified.
+						  const element = {
+						  type: 'h1',
+						  props: {
+						    className: 'greeting',
+						    children: 'Hello, React!'
+						    }
+						  };
+						</code></pre>
+					</section>
+					<section>
+						<p class="slide-2__text">Render element</p>
+						<pre><code data-noescape data-trim class="hljs" >
+							ReactDOM.render(element, document.getElementById('root'));
+						</code></pre>
+					</section>
+				</section>
+				<section class="slide-3"> 
+					<h2 class="slide-2__text">Virtual DOM</h2>
+					<img class="slide__img slide-3__img" data-src="./img/virtualDOM.jpg">
+				</section>
+				<section>
+					<section>
+						<h2 class="slide-2__text">Component, props</h2>
+						<pre class="fragment fade-in"><code data-trim class="hljs" >
+							function Welcome(props) {
+							  return <h1>Hello, {props.name}</h1>;
+							}
+						</code></pre>
+						
+						<pre class="fragment fade-in"><code data-trim class="hljs" >
+							class Welcome extends React.Component {
+							  render() {
+							    return <h1>Hello, {this.props.name}</h1>;
+							  }
+							}
+						</code></pre>
+					</section>
+					<section class="slide-4-1">
+						<p class="slide-2__text">Render components</p>
+
+						<pre class="fragment fade-in"><code data-trim class="hljs" >
+							const element = < Welcome name="React" />;
+						</code></pre>
+						
+						<pre class="fragment fade-in"><code data-trim class="hljs" >
+							function Welcome(props) {
+							  return <h1>Hello, {props.name}</h1>;
+							};
+
+							const element = < Welcome name="React" />;ReactDOM.render(
+							  element,
+							  document.getElementById('root')
+							);
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2 class="slide-2__text">State</h2>
+						<pre class="fragment fade-in"><code data-trim class="hljs" >
+							class Car extends React.Component {
+							  constructor(props) {
+							    super(props);
+							    this.state = {brand: "Ford"};
+							  }
+
+							  render() {
+							    return (
+							      <div>
+							        <h1>My Car</h1>
+							      </div>
+							    );
+							  }
+							}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2 class="slide-2__text">Quick start</h2>
+						<img class="fragment fade-in slide__img slide__img_no-margin" src="./img/quickStart1.png" alt="">
+						<div>
+							<img class="fragment fade-in slide__img slide__img_no-margin" src="./img/quickStart2.png" alt="">
+						</div>
+						<div>
+							<img class="fragment fade-in slide__img slide__img_no-margin" src="./img/quickStart3.png" alt="">
+						</div>
+					</section>
+					<section>
+						<div class="slide-1-1">
+							<img class="slide__img slide-3__img slide-1-1__img slide__img_no-margin" src="./img/quickStart4.png" alt="">
+						</div>
+					</section>
+				</section>
+				<section>
+					<section class="slide-1-1">
+						<img class="slide__img slide-1-1__img" data-src="./img/endPresentation.png">
+						<ul class="slide-7__text list-plus">
+							<li class="fragment fade-in">Components</li>
+							<li class="fragment fade-in">Reuse HTML elements</li>
+							<li class="fragment fade-in">Virtual DOM</li>
+							<li class="fragment fade-in">Community</li>
+						</ul>
+					</section>
+					<section>
+						<p class="slide-2__text">Thank You for the attention :)</p>
+					</section>
+				</section>
 			</div>
 		</div>
 
@@ -38,12 +193,13 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
+				fragment: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+				],
 			});
 		</script>
 	</body>

@@ -79,6 +79,10 @@
 			var config = Reveal.getConfig().highlight || {};
 			config.highlightOnLoad = typeof config.highlightOnLoad === 'boolean' ? config.highlightOnLoad : true;
 			config.escapeHTML = typeof config.escapeHTML === 'boolean' ? config.escapeHTML : true;
+			
+			[].forEach.call( document.querySelectorAll( '.highlight' ), function( v, i) {
+				hljs.highlightBlock(v);
+			});
 
 			[].slice.call( document.querySelectorAll( '.reveal pre code' ) ).forEach( function( block ) {
 
