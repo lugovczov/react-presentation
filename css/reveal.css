@@ -24,6 +24,154 @@ body {
   background-color: #fff;
   color: #000; }
 
+.slide__img {
+  border: 1px solid #282c34 !important;
+  overflow: hidden; }
+  .slide__img_no-margin {
+    margin: 0 !important; }
+
+.slide-1 {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+  .slide-1__img {
+    margin: -5px !important;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: scaleX(1.3);
+            transform: scaleX(1.3); }
+  .slide-1__text {
+    bottom: 10%;
+    position: absolute;
+    font-family: "Baloo Bhaina 2", sans-serif !important;
+    font-size: 38px !important;
+    text-shadow: 2px 2px 3px blue !important; }
+
+.slide-1-1 {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .slide-1-1__img {
+    margin: -5px !important;
+    height: 100%;
+    width: 100%; }
+
+.slide-2__text {
+  font-family: "Baloo Bhaina 2", sans-serif !important;
+  font-size: 60px !important;
+  text-shadow: 1px 1px 2px blue !important; }
+
+.slide-3 {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+  .slide-3__img {
+    margin: -5px !important;
+    width: 100%;
+    height: 85%; }
+
+.slide-7__text {
+  font-family: "Baloo Bhaina 2", sans-serif !important;
+  font-size: 37px !important;
+  font-weight: 500;
+  text-shadow: black 1px 1px 5px, blue -1px -1px 5px,  blue -1px 1px 5px, black 1px -1px 5px; }
+
+.list-plus {
+  position: absolute;
+  top: 55%;
+  left: 28%;
+  list-style: none !important;
+  text-align: center !important; }
+
+.app {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #fff;
+  border-radius: 5px; }
+  .app-wrapper {
+    position: absolute;
+    top: 110px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 455px;
+    height: 475px; }
+  .app-facebook {
+    width: 70px;
+    height: 71px;
+    top: 200px;
+    left: 198px;
+    background: url("../img/facebook.svg.png") no-repeat;
+    background-size: cover;
+    border: 3px solid #fff; }
+  .app-instagram {
+    top: 0px;
+    left: 103px;
+    background: url("../img/instagram.svg.png") no-repeat;
+    background-size: cover;
+    border-radius: 15px; }
+  .app-netflix {
+    top: 210px;
+    left: 13px;
+    background: url("../img/netflix.svg.png") no-repeat;
+    background-size: cover; }
+  .app-times {
+    width: 209px;
+    height: 26px;
+    background: url("../img/newYorkTimes.svg.png") no-repeat;
+    background-size: cover;
+    border: none; }
+    .app-times-wrapper {
+      position: relative;
+      width: 219px;
+      height: 27px;
+      top: 17px;
+      left: 221px;
+      padding-top: 1px;
+      padding-left: 8px;
+      background-color: #fff;
+      border-radius: 10px;
+      border: 1px solid blue; }
+  .app-yahoo {
+    width: 203px;
+    height: 30px;
+    background: url("../img/yahoo!Mail.svg.png") no-repeat;
+    background-size: cover; }
+    .app-yahoo-wrapper {
+      position: relative;
+      width: 215px;
+      height: 33px;
+      top: 391px;
+      left: 231px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding-left: 8px;
+      border: 1px solid blue; }
+  .app-whatsApp {
+    top: 205px;
+    right: 0px;
+    background: url("../img/whatsApp.svg.png") no-repeat;
+    background-size: cover;
+    border-radius: 15px; }
+  .app-dropbox {
+    width: 63px;
+    top: 3px;
+    left: 4px;
+    background: url("../img/dropbox.svg.png") no-repeat;
+    background-size: cover;
+    border: none; }
+    .app-dropbox-wrapper {
+      position: relative;
+      width: 70px;
+      height: 66px;
+      top: 342px;
+      left: 103px;
+      background-color: #fff;
+      border-radius: 5px;
+      border: 1px solid blue; }
+
 /*********************************************
  * VIEW FRAGMENTS
  *********************************************/
@@ -241,8 +389,8 @@ body {
     color: currentColor;
     -webkit-transform: scale(0.9999);
             transform: scale(0.9999);
-    transition: color 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
-    transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+    transition: color 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+    transition: color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
     z-index: 2;
     pointer-events: auto;
     font-size: inherit;
