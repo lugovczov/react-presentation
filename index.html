@@ -32,6 +32,9 @@
 					<section class="slide-1">
 						<img class="slide__img slide-1__img" data-src="./img/startPresentation.jpg">
 						<h1 class="slide-1__text">Introduction in React</h1>
+						<aside class="notes">
+							Hi, today i tell you about react
+						</aside>
 					</section>
 					<section class="slide-1-1">
 						<img class="slide__img slide-1-1__img" data-src="./img/startFull.jpg">
@@ -50,6 +53,10 @@
 								<div class="app app-dropbox"></div>
 							</div>
 						</wrapper>
+						<aside class="notes">
+							React is developed and maintained by Facebook, Instagram, and the community of individual developers and corporations.
+							What are the basic concepts?
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -82,17 +89,37 @@
 						    }
 						  };
 						</code></pre>
+						<aside class="notes">
+							With JSX, we can write what looks like HTML, and also we can create and use our own XML-like tags.
+							------>>>>>
+							Here's what JSX looks like assigned to a variable. Using JSX is not mandatory for writing React.
+							Babel compile JSX into calls React.createElement().
+							------>>>>>
+							These two examples are equivalent to each other
+							React.createElement () conducts some checks to identify bugs in the code, but most importantly, it creates an object similar to this:
+							------>>>>>
+							These objects are called React elements. We can say that they describe the result that we want to see on the screen. React reads these objects and uses them to construct and maintain the DOM.
+							JSX is easier to write and understand than creating and appending many elements in vanilla JavaScript, and is one of the reasons people love React so much.
+						</aside>
 					</section>
 					<section>
 						<p class="slide-2__text">Render element</p>
 						<pre><code data-noescape data-trim class="hljs" >
 							ReactDOM.render(element, document.getElementById('root'));
 						</code></pre>
+						<aside class="notes">
+							ReactDOM.render is used to render a React element,
+							where (document.getElementById('root')) it is root node DOM
+						</aside>
 					</section>
 				</section>
 				<section class="slide-3"> 
 					<h2 class="slide-2__text">Virtual DOM</h2>
 					<img class="slide__img slide-3__img" data-src="./img/virtualDOM.jpg">
+					<aside class="notes">
+						React DOM compares the element and its child tree with the previous version and makes only the minimally necessary changes to the DOM.
+						Instead of interacting with the DOM directly, we work with its lightweight copy. We can make changes to the copy based on our needs, and then apply the changes to the real DOM. In this case, the DOM tree is compared with its virtual copy, the difference is determined and the redrawing of what has been changed is started.
+					</aside>
 				</section>
 				<section>
 					<section>
@@ -110,6 +137,16 @@
 							  }
 							}
 						</code></pre>
+						<aside class="notes">
+							Components allow you to divide the user interface into independent, reusable parts and work with each part separately
+							Conceptually, components are similar to JavaScript functions. They take arbitrary input (called "props" or properties) and return React elements that describe what should appear on the screen.
+							The easiest way to define a component is to write a JavaScript function:
+							------>>>>>
+							This function is a valid React component because it takes a single “props” object argument (which denotes properties) with data and returns a React element. We call such components “functional” because they are literally JavaScript functions.
+							You can also use a class from ES6 to define a component:
+							------>>>>>
+							The two above components are equivalent in terms of React.
+						</aside>
 					</section>
 					<section class="slide-4-1">
 						<p class="slide-2__text">Render components</p>
@@ -128,6 +165,13 @@
 							  document.getElementById('root')
 							);
 						</code></pre>
+						<aside class="notes">
+							Elements can also be custom components:
+							------>>>>>
+							When React sees an element representing a custom component, it passes the JSX attributes to that component as a single object. We call this object «props».
+							------>>>>>
+							For example, this code displays “Hello React” on the page:
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -149,11 +193,21 @@
 							  }
 							}
 						</code></pre>
+						<aside class="notes">
+							The state gives the components the ability to respond to user actions, server responses, and other events without compromising the purity of the component.
+							React components have a built-in state object. This state object stores property values that belong to the component.
+							When the state object changes, the component is redrawn.
+							------>>>>>
+							State object is initialized in the constructor.
+						</aside>
 					</section>
 				</section>
 				<section>
 					<section>
 						<h2 class="slide-2__text">Quick start</h2>
+						<aside class="notes">
+							Open IDE and write in terminal “npx create-react-app my-app”
+						</aside>
 					</section>					
 					<section>
 						<img class="slide__img slide__img_no-margin" src="./img/quickStart1.png" alt="">
@@ -166,11 +220,23 @@
 						<div>
 							<img class="fragment fade-in slide__img slide__img_no-margin" src="./img/quickStart3.png" alt="">
 						</div>
+						<aside class="notes">
+							After installation, is necessary go in new folder  “my-app” 
+							------>>>>>
+							The layout of the future application will appear
+							------>>>>>
+							Write in terminal “npm start” and wait
+							------>>>>>
+							In your default browser will be open react app
+						</aside>
 					</section>
 					<section>
 						<div class="slide-1-1">
 							<img class="slide__img slide-3__img slide-1-1__img slide__img_no-margin" src="./img/quickStart4.png" alt="">
 						</div>
+						<aside class="notes">
+							Bingo! You can start developing on React
+						</aside>
 					</section>
 				</section>
 				<section>
@@ -182,6 +248,17 @@
 							<li class="fragment fade-in">Virtual DOM</li>
 							<li class="fragment fade-in">Community</li>
 						</ul>
+						<aside class="notes">
+							In the end, I want to note the following advantages of using a React:
+							------>>>>>
+							you can create components that look like custom and easily modify them.
+							------>>>>>
+							Reuse HTML elements to quickly and efficiently create user interfaces.
+							------>>>>>
+							Using Virtual DOM allows creating high-performance applications,
+							------>>>>>
+							This library is developed and maintained by highly qualified developers and has a large community.
+						</aside>
 					</section>
 					<section>
 						<p class="slide-2__text">Thank You for the attention :)</p>
